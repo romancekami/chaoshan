@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CHAOSHAN</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             height: 100vh;
             padding: 0;
             position: relative;
             background: rgb(51, 51, 51);
             text-align: center;
-            /* transform: translatey(-25%); */
-            /* margin-top: -400px; */
-            /* transform: translateY(-25%); */
         }
 
         .white {
+            position: relative;
+            top: -2px;
             color: ivory;
             cursor: pointer;
             font-size: x-large;
-            margin-top: 5px;
             font-weight: 400;
         }
 
@@ -33,34 +32,99 @@
             transform: translateY(-50%);
         }
 
-        #flower {
+        #qiehuanzuo {
+            position: absolute;
+            background-color: transparent;
+            left: 0;
+            width: 50%;
+            height: 430px;
+            top: 0;
+            z-index: 10;
             cursor: w-resize;
         }
 
-        #flower:hover {
-            transition: 1s;
-            outline: 500px outset #c889ebe8;
+        #qiehuanyou {
+            position: absolute;
+            background-color: transparent;
+            left: 50%;
+            width: 50%;
+            height: 430px;
+            top: 0;
+            z-index: 10;
+            cursor: w-resize;
         }
-    </style>
 
+        .bao {
+            position: relative;
+            display: inline-block;
+            height: 430px;
+        }
+
+        .bao:hover {
+            transition: 0.7s;
+            transition-delay: 350ms;
+            outline: 500px outset #c889ebe8;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        
+        #next,#prev {
+            border-radius: 5px;
+        }
+        #next:hover {
+            color: #c889ebe8;
+        }
+        #prev:hover {
+            color: #c889ebe8;
+        }
+        #xg:hover {
+            color: #c889ebe8;
+        }
+    
+        /* #flower {
+            cursor: w-resize;
+        } */
+
+        /* #flower:hover {
+            transition: 1s;
+            transition-delay: 400ms;
+            outline: 500px outset #c889ebe8;
+        } */
+    </style>
 </head>
 
 <body>
     <div class="center">
-        <img src="1226px宽轮播图/lun1.jpg" alt="图无了" id="flower" width="800px" height="430px">
+        <div class="bao">
+                <img
+                    src="1226px宽轮播图/lun1.jpg"
+                    alt="图无了"
+                    id="flower"
+                    width="800px"
+                    height="430px"
+                />
+            <span id="qiehuanzuo"></span>
+            <span id="qiehuanyou"></span>
+        </div>
         <br />
         <span class="white">
-            <span id="prev">PREV</span> /
+            <span id="prev">PREV</span> <span id="xg">/</span>
             <span id="next">NEXT</span>
         </span>
     </div>
     <script>
         // 1.获取事件源 需要的标签
-        var flower = document.getElementById('flower');
-        var nextBtn = document.getElementById('next');
-        var prevBtn = document.getElementById('prev');
+        // var xh = document.getElementsByClassName("qiehuan");
+        // var afterstyle = window.getComputedStyle(xh, ":after");
+        var xq = document.getElementById("qiehuanzuo");
+        var xh = document.getElementById("qiehuanyou");
+        console.log(xq.index);
 
-        var minIndex = 1, maxIndex = 5;
+        var flower = document.getElementById("flower");
+        var nextBtn = document.getElementById("next");
+        var prevBtn = document.getElementById("prev");
+
+        var minIndex = 1,
+            maxIndex = 5;
         var currentIndex = minIndex;
 
         // 2.监听按钮的点击
@@ -72,8 +136,11 @@
             } else {
                 currentIndex++;
             }
-            flower.setAttribute('src', `1226px宽轮播图/lun${currentIndex}.jpg`);
-        }
+            flower.setAttribute(
+                "src",
+                `1226px宽轮播图/lun${currentIndex}.jpg`
+            );
+        };
 
         // 上一张
         prevBtn.onclick = function () {
@@ -82,19 +149,49 @@
             } else {
                 currentIndex--;
             }
-            flower.setAttribute('src', `1226px宽轮播图/lun${currentIndex}.jpg`);
-        }
+            flower.setAttribute(
+                "src",
+                `1226px宽轮播图/lun${currentIndex}.jpg`
+            );
+        };
 
         //单击图片跳转下一张
-        flower.onclick = function () {
+        // flower.onclick = function () {
+        //     if (currentIndex === maxIndex) {
+        //         currentIndex = minIndex;
+        //     } else {
+        //         currentIndex++;
+        //     }
+        //     flower.setAttribute(
+        //         "src",
+        //         `1226px宽轮播图/lun${currentIndex}.jpg`
+        //     );
+        // };
+
+        // 单击左侧往左
+        xq.onclick = function () {
+            if (currentIndex === minIndex) {
+                currentIndex = maxIndex;
+            } else {
+                currentIndex--;
+            }
+            flower.setAttribute(
+                "src",
+                `1226px宽轮播图/lun${currentIndex}.jpg`
+            );
+        };
+        //单击右侧往右
+        xh.onclick = function () {
             if (currentIndex === maxIndex) {
                 currentIndex = minIndex;
             } else {
                 currentIndex++;
             }
-            flower.setAttribute('src', `1226px宽轮播图/lun${currentIndex}.jpg`);
-        }
+            flower.setAttribute(
+                "src",
+                `1226px宽轮播图/lun${currentIndex}.jpg`
+            );
+        };
     </script>
 </body>
-
 </html>
