@@ -1,11 +1,12 @@
-        body {
+        * {
             margin: 0;
             padding: 0;
+        }
+
+        body {
             height: 100vh;
             width: 100vw;
-            position: relative;
             background: rgb(51, 51, 51);
-            text-align: center;
         }
 
         .white {
@@ -62,12 +63,6 @@
         #next,#prev {
             border-radius: 5px;
         }
-        #next:hover {
-            color: #c889ebe8;
-        }
-        #prev:hover {
-            color: #c889ebe8;
-        }
-        #xg:hover {
+        #next:hover,#prev:hover,#xg:hover {
             color: #c889ebe8;
         }
