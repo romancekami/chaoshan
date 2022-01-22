@@ -5,94 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CHAOSHAN</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            padding: 0;
-            position: relative;
-            background: rgb(51, 51, 51);
-            text-align: center;
-        }
-
-        .white {
-            position: relative;
-            top: -2px;
-            color: ivory;
-            cursor: pointer;
-            font-size: x-large;
-            font-weight: 400;
-        }
-
-        .center {
-            margin: 0 auto;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        #qiehuanzuo {
-            position: absolute;
-            background-color: transparent;
-            left: 0;
-            width: 50%;
-            height: 430px;
-            top: 0;
-            z-index: 10;
-            cursor: w-resize;
-        }
-
-        #qiehuanyou {
-            position: absolute;
-            background-color: transparent;
-            left: 50%;
-            width: 50%;
-            height: 430px;
-            top: 0;
-            z-index: 10;
-            cursor: w-resize;
-        }
-
-        .bao {
-            position: relative;
-            display: inline-block;
-            height: 430px;
-        }
-
-        .bao:hover {
-            transition: 0.7s;
-            transition-delay: 350ms;
-            outline: 500px outset #c889ebe8;
-            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        }
-        
-        #next,#prev {
-            border-radius: 5px;
-        }
-        #next:hover {
-            color: #c889ebe8;
-        }
-        #prev:hover {
-            color: #c889ebe8;
-        }
-        #xg:hover {
-            color: #c889ebe8;
-        }
-    
-        /* #flower {
-            cursor: w-resize;
-        } */
-
-        /* #flower:hover {
-            transition: 1s;
-            transition-delay: 400ms;
-            outline: 500px outset #c889ebe8;
-        } */
-    </style>
+    <link rel="stylesheet" href="音乐播放器.css" />
+    <link rel="stylesheet" href="图片切换.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- 图片切换部分 -->
     <div class="center">
         <div class="bao">
                 <img
@@ -110,88 +29,26 @@
             <span id="prev">PREV</span> <span id="xg">/</span>
             <span id="next">NEXT</span>
         </span>
+
+        <!-- 播放器部分 -->
+        <div class="player">
+            <audio src=""></audio>
+            <div class="btns">
+                <div class="prev">
+                    <span class="material-icons"> skip_previous </span>
+                </div>
+                <div class="playPause">
+                    <span class="material-icons"> play_arrow </span>
+                </div>
+                <div class="next">
+                    <span class="material-icons"> skip_next </span>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        // 1.获取事件源 需要的标签
-        // var xh = document.getElementsByClassName("qiehuan");
-        // var afterstyle = window.getComputedStyle(xh, ":after");
-        var xq = document.getElementById("qiehuanzuo");
-        var xh = document.getElementById("qiehuanyou");
-        console.log(xq.index);
 
-        var flower = document.getElementById("flower");
-        var nextBtn = document.getElementById("next");
-        var prevBtn = document.getElementById("prev");
-
-        var minIndex = 1,
-            maxIndex = 5;
-        var currentIndex = minIndex;
-
-        // 2.监听按钮的点击
-        // 下一张
-        nextBtn.onclick = function () {
-            // alert('被点击了');
-            if (currentIndex === maxIndex) {
-                currentIndex = minIndex;
-            } else {
-                currentIndex++;
-            }
-            flower.setAttribute(
-                "src",
-                `1226px宽轮播图/lun${currentIndex}.jpg`
-            );
-        };
-
-        // 上一张
-        prevBtn.onclick = function () {
-            if (currentIndex === minIndex) {
-                currentIndex = maxIndex;
-            } else {
-                currentIndex--;
-            }
-            flower.setAttribute(
-                "src",
-                `1226px宽轮播图/lun${currentIndex}.jpg`
-            );
-        };
-
-        //单击图片跳转下一张
-        // flower.onclick = function () {
-        //     if (currentIndex === maxIndex) {
-        //         currentIndex = minIndex;
-        //     } else {
-        //         currentIndex++;
-        //     }
-        //     flower.setAttribute(
-        //         "src",
-        //         `1226px宽轮播图/lun${currentIndex}.jpg`
-        //     );
-        // };
-
-        // 单击左侧往左
-        xq.onclick = function () {
-            if (currentIndex === minIndex) {
-                currentIndex = maxIndex;
-            } else {
-                currentIndex--;
-            }
-            flower.setAttribute(
-                "src",
-                `1226px宽轮播图/lun${currentIndex}.jpg`
-            );
-        };
-        //单击右侧往右
-        xh.onclick = function () {
-            if (currentIndex === maxIndex) {
-                currentIndex = minIndex;
-            } else {
-                currentIndex++;
-            }
-            flower.setAttribute(
-                "src",
-                `1226px宽轮播图/lun${currentIndex}.jpg`
-            );
-        };
-    </script>
+    <!-- js部分 -->
+    <script src="图片切换.js"></script>
+    <script src="音乐播放器.js"></script>
 </body>
 </html>

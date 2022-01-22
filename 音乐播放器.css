@@ -1,0 +1,77 @@
+/* * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* body {
+display: flex;
+justify-content: center;
+align-items: center; 
+height: 100vh;
+background-color: rgba(20, 91, 104, 0.876);
+}  */
+
+/* .music {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+} */
+
+.player {
+    box-sizing: content-box;
+    position: absolute;
+    top: 8px;
+    right: 275px;
+    width: 100px;
+    height: 20px;
+    background: rgb(187, 129, 218);
+    border: 2px solid rgba(238, 234, 234, 0.288);
+    border-radius: 80px;
+    padding: 5px 10px;
+    z-index: 2;
+}
+
+.btns {
+    /* position: relative; */
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+}
+.btns div {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    cursor: pointer;
+    box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.1),
+        0 5px 10px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.btns div:active,
+.btns div.active {
+    color: coral;
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.15),
+        inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btns .playPause {
+    height: 20px;
+    width: 20px;
+}
+.btns .material-icons {
+    font-size: 1em;
+}
+.btns .playPause span {
+    font-size: 1.5em;
+}
