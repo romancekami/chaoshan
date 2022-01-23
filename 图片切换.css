@@ -108,10 +108,12 @@
 img {
     width: 100vw;
     height: 14rem;
+    max-width: 27rem;
 }
 
 .white {
     margin-top: -1rem;
     font-size: 1.2rem;
     color: ivory;
+    cursor: w-resize;
 }
