@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHAOSHAN</title>
-    <link rel="shortcut icon" href="favicon.ico?">
-    <link rel="stylesheet" href="音乐播放器.css" />
-    <link rel="stylesheet" href="图片切换.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CHAOSHAN</title>
+<link rel="shortcut icon" href="favicon.ico?">
+<link rel="stylesheet" href="音乐播放器.css" />
+<link rel="stylesheet" href="图片切换.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- 图片切换部分 viewport-fit=contain-->
+<!-- 图片切换部分 viewport-fit=contain-->
     <div class="center">
-        <div class="bao">
-                <img
-                    src="1226px宽轮播图/lun1.jpg"
-                    alt="图无了"
-                    id="flower"
-                    width="800px"
-                    height="430px"
-                />
-            <span id="qiehuanzuo"></span>
-            <span id="qiehuanyou"></span>
-        </div>
-        <br />
-        <span class="white">
-            <span id="prev">PREV</span> <span id="xg">/</span>
-            <span id="next">NEXT</span>
-        </span>
+    <div class="bao">
+            <img
+                src="1226px宽轮播图/lun1.jpg"
+                alt="图无了"
+                id="flower"
+            />
+        <span id="qiehuanzuo"></span>
+        <span id="qiehuanyou"></span>
+    </div>
+    <br />
+    <span class="white">
+        <span id="prev">PREV</span> <span id="xg">/</span>
+        <span id="next">NEXT</span>
+    </span>
+    </div>
 
-        <!-- 播放器部分 -->
-        <div class="player">
-            <audio src=""></audio>
-            <div class="btns">
-                <div class="prev">
-                    <span class="material-icons"> skip_previous </span>
-                </div>
-                <div class="playPause">
-                    <span class="material-icons"> play_arrow </span>
-                </div>
-                <div class="next">
-                    <span class="material-icons"> skip_next </span>
-                </div>
+    <!-- 播放器部分 -->
+    <div class="player">
+        <audio src=""></audio>
+        <div class="btns">
+            <div class="prev">
+                <span class="material-icons"> skip_previous </span>
+            </div>
+            <div class="playPause">
+                <span class="material-icons"> play_arrow </span>
+            </div>
+            <div class="next">
+                <span class="material-icons"> skip_next </span>
             </div>
         </div>
     </div>
 
-    <!-- js部分 -->
-    <script src="图片切换.js"></script>
-    <script src="音乐播放器.js"></script>
+
+<!-- js部分 -->
+<script src="图片切换.js"></script>
+<script src="音乐播放器.js"></script>
 </body>
 </html>

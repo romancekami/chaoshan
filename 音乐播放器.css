@@ -1,30 +1,8 @@
-/* * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
-} */
-
-/* body {
-display: flex;
-justify-content: center;
-align-items: center; 
-height: 100vh;
-background-color: rgba(20, 91, 104, 0.876);
-}  */
-
-/* .music {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-} */
-
 .player {
     box-sizing: content-box;
     position: absolute;
-    top: 8px;
-    right: 275px;
+    top: 13rem;
+    right: -0.1rem;
     width: 100px;
     height: 20px;
     background: rgb(187, 129, 218);
@@ -32,6 +10,8 @@ align-items: flex-end;
     border-radius: 80px;
     padding: 5px 10px;
     z-index: 2;
+    transform: scale(0.9);
+    opacity: 0.8;
 }
 
 .btns {
