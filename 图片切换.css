@@ -136,13 +136,3 @@ img {
 #xg:active {
     color: #c889ebe8;
 } */
-/* div[class^="wuhu"]以芜湖开头的属性选择器
-div[class$="wuhu"]结尾
-div[class*="renyi"]
-div[class=quanpipei] */
-/* div[class] {
-    选中所有存在class这个属性的div
-} */
-[id] {
-    color: lightseagreen;
-}
