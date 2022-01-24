@@ -8,6 +8,10 @@
             height: 100vh;
             width: 100vw;
             background: rgb(51, 51, 51);
+            -moz-user-select: none; /*火狐*/
+            -webkit-user-select: none; /*webkit浏览器*/
+            -ms-user-select: none; /*IE10*/
+            user-select: none;/*选中文字时避免出现蓝色背景*/           
         }
 
         /* .white {
@@ -116,5 +120,29 @@ img {
     margin-top: 0rem;
     font-size: 2rem;
     color: ivory;
-    cursor: w-resize;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;  
+}
+
+#next:active,#prev:active,#xg:active {
+    color: #c889ebe8;
+}
+
+/* #prev:active {
+    color: #c889ebe8;
+}
+
+#xg:active {
+    color: #c889ebe8;
+} */
+/* div[class^="wuhu"]以芜湖开头的属性选择器
+div[class$="wuhu"]结尾
+div[class*="renyi"]
+div[class=quanpipei] */
+/* div[class] {
+    选中所有存在class这个属性的div
+} */
+[id] {
+    color: lightseagreen;
 }
