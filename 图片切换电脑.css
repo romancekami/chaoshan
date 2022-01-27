@@ -1,0 +1,146 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: rgb(51, 51, 51);
+            -moz-user-select: none; /*火狐*/
+            -webkit-user-select: none; /*webkit浏览器*/
+            -ms-user-select: none; /*IE10*/
+            user-select: none;/*选中文字时避免出现蓝色背景*/           
+        }
+
+        /* .white {
+            display: flex;
+            position: relative;
+            top: -2px;
+            color: ivory;
+            cursor: pointer;
+            font-size: x-large;
+            font-weight: 400;
+        }
+
+        .center {
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #qiehuanzuo {
+            position: absolute;
+            background-color: transparent;
+            left: 0;
+            width: 50%;
+            height: 430px;
+            top: 0;
+            z-index: 1;
+            cursor: w-resize;
+        }
+
+        #qiehuanyou {
+            position: absolute;
+            background-color: transparent;
+            left: 50%;
+            width: 50%;
+            height: 430px;
+            top: 0;
+            z-index: 1;
+            cursor: w-resize;
+        }
+
+        .bao {
+            display: flex;
+            position: relative;
+            display: inline-block;
+            height: 430px;
+        }
+
+        .bao:hover {
+            transition: 0.7s;
+            transition-delay: 350ms;
+            outline: 800px outset #c889ebe8;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* } */
+        
+        /* #next,#prev { */
+            /* border-radius: 5px; */
+        /* } */
+        /* #next:hover,#prev:hover,#xg:hover { 
+            color: #c889ebe8;
+        } */
+
+.center {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bao {
+    box-sizing: content-box;
+    position: relative;
+    height: 27rem;
+}
+
+#qiehuanzuo {
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    width: 33vw;
+    height: 27rem;
+    top: 0;
+    z-index: 1;
+    cursor: w-resize;
+}
+
+#qiehuanyou {
+    position: absolute;
+    background-color: transparent;
+    left: 50vw;
+    width: 33vw;
+    height: 27rem;
+    top: 0;
+    z-index: 1;
+    cursor: w-resize;
+}
+
+img {
+    width: 66vw;
+    height: 27rem;
+    /* max-width: 50rem; */
+}
+
+.white {
+    position: relative;
+    margin-top: 0rem;
+    font-size: 2rem;
+    color: ivory;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;  
+}
+
+#next:active,#prev:active,#xg:active {
+    color: #c889ebe8;
+}
+
+.bao:hover {
+    transition: 0.7s;
+    transition-delay: 350ms;
+    outline: 800px outset #c889ebe8;
+}
+
+/* #prev:active {
+    color: #c889ebe8;
+}
+
+#xg:active {
+    color: #c889ebe8;
+} */
