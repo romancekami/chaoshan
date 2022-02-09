@@ -1,0 +1,15 @@
+ok,F12大概看了一下这个网站的html和css，估计它那个切换图片是用js做的，然后想看下它切换图片的那部分js是怎么写的，但我发现它head里边有一堆<script></script>的js链接也不知道到底哪个是有用的，怎样才能获取到切换图片的那部分js呢？
+
+
+前端菜鸟想问下在电脑端写的页面如何适配移动端？(不用管电脑端如何显示，只要手机端正常显示就行)
+要用啥布局吗，感觉手机端单位是不是一般不用px？
+
+电脑端正常显示如下：
+![](https://gitee.com/romancekami/gitee_tuchuang/raw/master/images/202201222134372.png)
+<br />
+---
+手机端情况如下：<br />
+在电脑端写的页面 到了手机浏览器上显示元素会过宽 居中什么的也不对了<br />
+<img src="https://gitee.com/romancekami/gitee_tuchuang/raw/master/images/202201222138997.png" width=30%>
+
+https://cdn.jsdelivr.net/gh/romancekami/csshiping.github.io@main/shengyin.mp4
